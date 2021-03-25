@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "dumi-app",
+  "name": "start-react-ui",
   "scripts": {
     "start": "dumi dev",
     "build": "dumi build",
@@ -21,9 +21,13 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.11",
     "dumi": "^1.0.12",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
   }
 }
