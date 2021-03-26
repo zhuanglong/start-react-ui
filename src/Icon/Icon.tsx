@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import './style';
 
 export type ButtonType = 'default' | 'primary' | 'info' | 'link';
 
@@ -47,7 +48,7 @@ const Button: React.FC<ButtonProps> = props => {
   }
   return (
     <button
-      className={classNames('sru-btn')}
+      className={classNames('sru-icon')}
       type={htmlType}
       disabled={disabled}
       {...restProps}

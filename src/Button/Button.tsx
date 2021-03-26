@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import './style';
 
 export type ButtonType = 'default' | 'primary' | 'info' | 'link';
 

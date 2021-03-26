@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from 'start-react-ui';
+import { Icon } from 'start-react-ui';
 
 export default () => (
   <>
-    <Button type="primary">primary</Button>
-    <Button type="link" href="https://www.baidu.com/">
+    <Icon type="primary">primary</Icon>
+    <Icon type="link" href="https://www.baidu.com/">
       link
-    </Button>
+    </Icon>
   </>
 );
