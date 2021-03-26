@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import './style';
+import './style/index.scss';
 
 export type ButtonType = 'default' | 'primary' | 'info' | 'link';
 
@@ -39,6 +39,12 @@ const Button: React.FC<ButtonProps> = props => {
     href,
     ...restProps
   } = props;
+
+  const classes = classNames('sru-btn', {
+    [`sru-btn-${type}`]: type,
+    [`sru-btn-${size}`]: size,
+  });
+
   if (type === 'link' && href) {
     return (
       <a href={href} {...restProps}>
@@ -46,9 +52,10 @@ const Button: React.FC<ButtonProps> = props => {
       </a>
     );
   }
+
   return (
     <button
-      className={classNames('sru-btn')}
+      className={classes}
       type={htmlType}
       disabled={disabled}
       {...restProps}
