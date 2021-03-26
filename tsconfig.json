@@ -21,6 +21,7 @@
     "lib",
     "es",
     "dist",
+    "docs-dist",
     "typings",
     "**/__test__",
     "test",

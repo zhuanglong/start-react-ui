@@ -3,6 +3,7 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   title: 'Start React UI',
   mode: 'site',
+  outputPath: 'docs-dist',
   locales: [
     ['zh-CN', '中文'],
     ['en-US', 'English'],
