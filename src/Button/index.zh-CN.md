@@ -39,13 +39,13 @@ nav:
 
 按钮的属性说明如下：
 
-| 属性     | 说明                           | 类型                                       | 默认值   |
-| -------- | ------------------------------ | ------------------------------------------ | -------- |
-| type     | 设置按钮类型                   | `default` \| `primary` \| `info` \| `link` |          |
-| size     | 设置按钮大小                   | `lg` \| `md` \| `sm`                       | `md`     |
-| disabled | 按钮失效状态                   | boolean                                    | false    |
-| href     | 点击跳转的地址，用于 type=link | string                                     | -        |
-| htmlType | 设置 `button` 原生的 `type` 值 | string                                     | `button` |
-| onClick  | 点击按钮时的回调               | (event) => void                            | -        |
+| 属性     | 说明                           | 类型                                       | 默认值    |
+| -------- | ------------------------------ | ------------------------------------------ | --------- |
+| type     | 设置按钮类型                   | `default` \| `primary` \| `info` \| `link` | `default` |
+| size     | 设置按钮大小                   | `lg` \| `md` \| `sm`                       | `md`      |
+| disabled | 按钮失效状态                   | boolean                                    | false     |
+| href     | 点击跳转的地址，用于 type=link | string                                     | -         |
+| htmlType | 设置 `button` 原生的 `type` 值 | `button` \| `submit` \| `reset`            | `button`  |
+| onClick  | 点击按钮时的回调               | (event) => void                            | -         |
 
 支持原生 button 的其他所有属性。
