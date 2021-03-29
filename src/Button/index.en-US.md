@@ -15,6 +15,10 @@ To trigger an operation.
 
 <code src="./demo/type.tsx" />
 
+## Disabled
+
+<code src="./demo/disabled.tsx" />
+
 ## Size
 
 <code src="./demo/size.tsx" />

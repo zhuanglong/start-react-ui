@@ -6,8 +6,6 @@ export type ButtonType = 'default' | 'primary' | 'info' | 'link';
 
 export type ButtonSize = 'lg' | 'md' | 'sm';
 
-export type ButtonHTMLTypes = 'submit' | 'button' | 'reset';
-
 interface BaseButtonProps {
   type?: ButtonType;
   size?: ButtonSize;
@@ -16,13 +14,12 @@ interface BaseButtonProps {
 }
 
 type NativeButtonProps = {
-  htmlType?: ButtonHTMLTypes;
+  htmlType?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
   Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
 
 type AnchorButtonProps = {
-  href?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & BaseButtonProps &
   Omit<React.AnchorHTMLAttributes<any>, 'type' | 'onClick'>;
@@ -43,11 +40,12 @@ const Button: React.FC<ButtonProps> = props => {
   const classes = classNames('sru-btn', {
     [`sru-btn-${type}`]: type,
     [`sru-btn-${size}`]: size,
+    disabled: type === 'link' && href && disabled,
   });
 
   if (type === 'link' && href) {
     return (
-      <a href={href} {...restProps}>
+      <a className={classes} href={href} {...restProps}>
         {children}
       </a>
     );

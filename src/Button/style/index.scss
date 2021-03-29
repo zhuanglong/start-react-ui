@@ -1,6 +1,11 @@
 @import '../../style/index.scss';
 @import './mixin.scss';
 
+[id^="components-button-demo-"] .sru-btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+
 .sru-btn {
   position: relative;
   display: inline-block;
@@ -34,4 +39,52 @@
 
 .sru-btn-info {
   @include button-style($info, $info, $white);
+}
+
+.sru-btn-link {
+  color: $btn-link-color;
+  font-weight: $font-weight-normal;
+  text-decoration: $link-decoration;
+  background: transparent;
+  box-shadow: none;
+  &:hover {
+    color: $btn-link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &:focus, &.focus {
+    text-decoration: $link-hover-decoration;
+  }
+  &[disabled], &.disabled {
+    color: $btn-link-disabled-color;
+    text-decoration: $link-decoration;
+    pointer-events: none;
+  }
+}
+
+// size
+.sru-btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.sru-btn-md {
+  @include button-size(
+    $btn-padding-y-md,
+    $btn-padding-x-md,
+    $btn-font-size-md,
+    $btn-border-radius-md
+  );
+}
+
+.sru-btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
 }
